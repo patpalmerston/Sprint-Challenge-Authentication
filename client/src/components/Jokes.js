@@ -7,7 +7,7 @@ import requiresAuth from '../auth/requiresAuth';
 
 class Jokes extends React.Component {
   state = {
-    loggedIn: false,
+    // loggedIn: false,
     jokes: [],
   };
 
@@ -28,7 +28,7 @@ class Jokes extends React.Component {
   componentDidMount() {
     axios.get('/jokes')
     .then(res => {
-      this.setState({ users: res.data });
+      this.setState({ jokes: res.data });
     })
   }
 

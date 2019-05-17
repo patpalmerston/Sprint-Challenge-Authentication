@@ -52,7 +52,7 @@ class Signup extends React.Component {
 
     // the endpoint could come from an environment variable
     // const endpoint = `${process.env.API_URL}/api/auth/login`;
-    const endpoint = 'http://localhost:3300/api/auth/register';
+    const endpoint = 'http://localhost:3300/api/register';
 
     axios
       .post(endpoint, this.state)
