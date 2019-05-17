@@ -23,8 +23,8 @@ export default function(Component) {
     render() {
       const token = localStorage.getItem('jwt');
 
-      const notLoggedIn = <div>Please login to see the users</div>;
-      // if there is no token, then show a message to the user
+      const notLoggedIn = <div>Please login to see the Jokes</div>;
+      
 
       return <> {token ? <Component {...this.props} /> : notLoggedIn} </>;
     }

@@ -20,7 +20,7 @@ class App extends React.Component {
             &nbsp; | &nbsp;
             <NavLink to='/jokes'>Jokes</NavLink>
             &nbsp; | &nbsp;
-            <button onClick={this.logout}></button>
+            <button onClick={this.logout}>Log Out</button>
           </nav>
         </header>
       
