@@ -34,6 +34,7 @@ function generateToken(user){
     subject: user.id,
     username: user.username
   }
+  
   const options = {
     expiresIn: '60m'
   };
