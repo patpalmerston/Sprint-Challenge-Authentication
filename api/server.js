@@ -12,4 +12,8 @@ server.use(express.json());
 
 configureRoutes(server);
 
+server.get('/', (req, res, next) => {
+  res.send('<h2>We are Live!<h2>')
+})
+
 module.exports = server;
