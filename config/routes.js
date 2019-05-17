@@ -12,14 +12,14 @@ module.exports = server => {
 };
 
 function register(req, res) {
-  let user = req.body;
-  const hash = bcrypt.hashSync(user.password, 10);
-  user.password = hash;
+  let info = req.body;
+  const hash = bcrypt.hashSync(info.password, 10);
+  info.password = hash;
 
   db('users')
-    .insert(user)
-    .then(ids => {
-      res.status().json(user)
+    .insert(info)
+    .then(saved => {
+      res.status(201).json(saved)
     })
     .catch(err => {
       res.status(401).json({message: err})
